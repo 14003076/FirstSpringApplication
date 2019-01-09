@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- The below tag is for Annotation - Comment Bean tags to use Annotation -->
+	<!-- <context:component-scan base-package="com.capgemini.app"/> -->
+<!-- <bean id="s" class="com.capgemini.app.bean.Organization"></bean> -->
+	
+	<context:component-scan base-package="com.capgemini.app"></context:component-scan>
+	<util:properties id="prop" location="IPAddress.properties"></util:properties>
+	<util:list id="list">
+	<value>shabzan</value>
+	<value>sai</value>
+	 </util:list>
+	 <util:set id="set">
+	 <value>vijayawada</value>
+	 <value>mumbai</value>
+	 </util:set>
+	 
+	 <util:map id="map">
+	 <entry key="mumbai" value="sai"></entry>
+	 <entry key="vijayawada" value="shabzan sai"></entry>
+	 </util:map>
+	 
+	 <bean id="date" class="java.time.LocalDate" factory-method="parse">
+	 <constructor-arg value="1996-08-18"></constructor-arg>
+	 </bean>
+</beans>
+
+
+
+
+
